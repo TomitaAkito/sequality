@@ -10,4 +10,12 @@ public class CalculateTest {
     int expected = 5;
     assertEquals(expected, calculate.sum(2, 3));
   }
+
+  @SuppressWarnings("deprecation")
+  @Test
+  public void testAverage() {
+    Calculate calc = new Calculate();
+    double expected = 3.3;
+    assertEquals(expected, calc.average(10, 3));
+  }
 }
