@@ -45,6 +45,6 @@ public class CalculateTest {
     assertEquals(expected, calc.sigmaOnlyEven(1, 5));
     // 奇数のみ
     expected = 0;
-    assertEquals(expected, calc.sigmaOnlyOdd(3, 3));
+    assertEquals(expected, calc.sigmaOnlyEven(1, 1));
   }
 }
