@@ -15,22 +15,14 @@ public class App {
     int sum = cal.sum(2, 3);
     int sum_o = 0;
     int sum_e = 0;
-    int num = 0;
 
     System.out.printf("Sum of 2 and 3 is %d. Average is %.1f%n", sum, cal.average(sum, 2));
 
-    sum = 0;
-    for (int i = 1; i <= 10; i++) {
-      sum = cal.sum(i, sum);
-      num++;
-    }
-    System.out.printf("Sum of 1 to 10 is %d. Average is %.1f%n", sum, cal.average(sum, num));
+    sum = cal.sigma(1, 10);
+    System.out.printf("Sum of 1 to 10 is %d. Average is %.1f%n", sum, cal.average(sum, 10));
 
-    num = 0;
-    for (int i = 1; i <= 10; i += 2)
-      sum_o = cal.sum(sum_o, i);
-    for (int i = 0; i <= 10; i += 2)
-      sum_e = cal.sum(sum_e, i);
+    sum_o = cal.sigmaOnlyOdd(1, 10);
+    sum_e = cal.sigmaOnlyEven(1, 10);
     System.out.printf("Sum of odd of 1 to 10 is %d. Sum of even is %d.\n", sum_o, sum_e);
   }
 }

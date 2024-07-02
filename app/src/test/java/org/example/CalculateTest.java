@@ -18,4 +18,33 @@ public class CalculateTest {
     double expected = 3.3;
     assertEquals(expected, calc.average(10, 3));
   }
+
+  @Test
+  public void testSigma() {
+    Calculate calc = new Calculate();
+    int expected = 15;
+    assertEquals(expected, calc.sigma(1, 5));
+  }
+
+  @Test
+  public void testSigmaOnlyOdd() {
+    Calculate calc = new Calculate();
+    // 単純な計算
+    int expected = 9;
+    assertEquals(expected, calc.sigmaOnlyOdd(1, 5));
+    // 偶数のみ
+    expected = 0;
+    assertEquals(expected, calc.sigmaOnlyOdd(2, 2));
+  }
+
+  @Test
+  public void testSigmaOnlyEven() {
+    Calculate calc = new Calculate();
+    // 単純な計算
+    int expected = 6;
+    assertEquals(expected, calc.sigmaOnlyEven(1, 5));
+    // 奇数のみ
+    expected = 0;
+    assertEquals(expected, calc.sigmaOnlyOdd(3, 3));
+  }
 }
