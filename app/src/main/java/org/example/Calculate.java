@@ -6,7 +6,10 @@ public class Calculate {
   }
 
   public double average(int x, int y) {
-    return (double) x / (double) y;
+    if (y == 0) {
+      throw new IllegalArgumentException("y cannot be zero");
+    }
+    return (double) x / y;
   }
 
   public int sigma(int start, int end) {
